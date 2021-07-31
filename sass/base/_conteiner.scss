@@ -4,6 +4,8 @@
     }
 
 
+    // Для 480+
+
 @media screen and (min-width:480px) {
     .conteiner {
         width: 480px;
@@ -11,12 +13,16 @@
     }
 }
 
+    // Для 768+
+
 @media screen and (min-width:768px) {
     .conteiner {
         width: 768px;  
     }
 }
 
+    // Для 1200+
+    
 @media screen and (min-width:1200px) {
     .conteiner {
         width: 1200px;
