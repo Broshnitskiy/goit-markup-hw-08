@@ -1,0 +1,330 @@
+.hat {
+    border-bottom: 1px solid #ECECEC;
+}
+
+.menu, .contact-list{
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+
+    .hat__conteiner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+.burger-btn{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__icon{
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover,
+    &:focus {
+        fill: var(--style-color)
+    }
+}
+
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--page-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
+    0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: scale(1.1);
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
+}
+
+.mobile-menu.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.mobile-menu__conteiner {
+    position: relative;
+    padding-top: 48px;
+    padding-left: 40px;
+}
+
+
+.mobile-menu__close-btn{
+    position: absolute;
+    top:10px;
+    right: 15px;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    cursor: pointer;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: var(--style-color)
+    }
+}
+
+.mobile-menu__close-icon{   
+    width: 18px;
+    height: 18px;
+}
+
+.mobile-menu-nav{
+margin-bottom: 302px;
+}
+
+.mobile-menu-nav__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-menu-nav__link{
+    
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+            color: var(--style-color);
+        }
+   
+}
+
+.mobile-menu-cont{
+    margin-bottom: 64px;
+}
+
+.mobile-menu-cont__item:not(:last-child){
+    margin-bottom: 32px;
+}
+
+.mobile-menu-cont__link-tel{
+  
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+
+    color: var(--style-color);
+}
+
+.mobile-menu-cont__link-mail{
+
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
+
+    color: var(--indent-color);
+}
+
+.mobile-menu-soc-list{
+    display: flex;
+}
+
+.mobile-menu-soc-list__item:not(:last-child){
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+
+.mobile-menu-soc-list__link{
+    padding-right: 10px;
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.222;
+    letter-spacing: 0.02em;
+
+    color: var(--style-color);
+    
+}
+
+// Стилі для планшету
+
+@media screen and (min-width:768px){
+   
+    .menu,
+    .contact-list {
+        display: block;
+    }
+
+    .burger-btn {
+        display: none;
+    }
+
+    .hat__conteiner,
+    .hat-nav {
+        display: flex;
+        align-items: center;
+    }
+
+
+    .menu {
+        display: flex;
+        margin-left: 88px;
+        }
+
+        
+    .menu__item {
+            position: relative;
+
+                &:not(:last-child) {
+                    margin-right: 50px;
+                    }
+        }
+
+
+    .menu__link {
+            display: block;
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            color: inherit;
+            font-weight: 500;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+
+            &:hover,
+            &:focus {
+                color: var(--style-color)
+            }
+        }
+
+    .menu__link--select {
+            color: var(--style-color);
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                display: block;
+                background-color: var(--style-color);
+                width: 100%;
+                height: 4px;
+                border-radius: 2px;
+            }
+        }
+
+    .contact-list {
+            margin-left: auto;
+        }
+
+    @media screen and (max-width:1199px) {
+        .contact-list__item:not(:last-child) {
+            margin-bottom: 10px;
+            }
+        }
+    
+
+     .contact-list__link {
+
+         display: flex;
+         align-items: center;
+    
+         color: var(--indent-color);
+         font-weight: 500;
+         font-size: 12px;
+         line-height: 1.166;
+         letter-spacing: 0.02em;
+
+         &:hover,
+         &:focus {
+             color: var(--style-color)
+         }
+     }
+
+    .contact-list__icon-mail {
+        margin-right: 8px;
+        width: 14px;
+        height: 10px;
+        fill: currentColor;
+    }
+
+     .contact-list__icon-tel {
+         margin-right: 8px;
+         width: 10px;
+         height: 14px;
+         fill: currentColor; 
+     } 
+    }  
+
+     // Стилі для descktop
+
+     @media screen and (min-width:1200px) {
+
+        .menu {
+            margin-left: 93px;
+        }
+
+        .contact-list {
+            display: flex;
+        }
+
+        .contact-list__item:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        .contact-list__link {
+           
+            padding-top: 32px;
+            padding-bottom: 32px;
+
+            color: var(--indent-color);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+
+            &:hover,
+            &:focus {
+                color: var(--style-color)
+            }
+        }
+
+         .contact-list__icon-mail {
+             margin-right: 10px;
+             width: 16px;
+             height: 12px;     
+         }
+
+         .contact-list__icon-tel {
+             margin-right: 10px;
+             width: 10px;
+             height: 16px;            
+         }
+        
+     }

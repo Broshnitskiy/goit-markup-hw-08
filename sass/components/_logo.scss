@@ -1,0 +1,31 @@
+.logo{
+    color: var(--style-color);
+        font-family: var(--another-font);
+        font-size: 24px;
+        line-height: 1.166;
+        letter-spacing: 0.03em;
+        animation-duration: 1500ms;
+
+        &__text-hat {
+            color: var(--grand-color);
+                }
+
+        &__text-footer {
+            color: var(--page-color);
+        }
+}
+
+@media screen and (min-width:1200px) {
+    .logo {
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+
+        &__text-hat {
+            color: var(--logo-color);
+        }
+    }
+}
+
+
+

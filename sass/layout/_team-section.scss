@@ -1,0 +1,51 @@
+.team {
+    background-color: var(--section-color);
+
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -30px;
+        margin-left: -30px;
+
+        &__item {
+            flex-basis: calc(100% / 4 - 30px);
+            margin-top: 30px;
+            margin-left: 30px;
+
+            background-color: var(--page-color);
+            border-radius: 0px 0px 4px 4px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+
+
+        &__card-name {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+
+        &__text {
+            font-size: 16px;
+            line-height: 1.1875;
+            letter-spacing: 0.03em;
+            text-align: center;
+        }
+
+        &__text--title-style {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        &__text--par-style {
+            margin-bottom: 16px;
+            color: var(--indent-color);
+        }
+    }
+
+    
+}
+
+
