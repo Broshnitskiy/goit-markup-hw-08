@@ -154,6 +154,7 @@ margin-bottom: 302px;
 
 .mobile-menu-soc-list{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .mobile-menu-soc-list__item:not(:last-child){
