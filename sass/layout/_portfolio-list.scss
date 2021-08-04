@@ -92,10 +92,12 @@
         flex-basis: calc(100% / 2 - 30px);
     }
 
-   .port-list__title--padding-botton {
-       padding-bottom: 56px;
-   }
-
+    @media screen and (max-width:1199px){
+            .port-list__title--padding-botton {
+            padding-bottom: 56px;
+            }
+    }
+   
 }
 
 

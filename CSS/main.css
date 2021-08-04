@@ -1130,6 +1130,9 @@ img {
     margin-left: 30px;
     flex-basis: calc(100% / 2 - 30px);
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .port-list__title--padding-botton {
     padding-bottom: 56px;
   }
