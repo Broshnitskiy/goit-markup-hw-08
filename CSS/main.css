@@ -514,6 +514,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 99;
   background-color: var(--page-color);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   overflow-y: scroll;
@@ -999,12 +1000,13 @@ img {
 
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .filter-list__item:not(:last-child) {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .filter-button {
@@ -1032,17 +1034,24 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.port-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+@media screen and (min-width: 768px) {
+  .filter-list {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .filter-list__item:not(:last-child) {
+    margin-bottom: 0px;
+  }
 }
 
-.port-list__item {
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-basis: calc(100% / 3 - 30px);
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
+  }
+}
+
+.port-list__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .port-list__link {
@@ -1107,6 +1116,26 @@ img {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--indent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .port-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+    margin-left: -30px;
+  }
+  .port-list__item {
+    margin-top: 30px;
+    margin-left: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .port-list__item {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .footer {

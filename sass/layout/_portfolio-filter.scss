@@ -1,12 +1,15 @@
+
 .filter-list {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .filter-list__item:not(:last-child) {
     margin-right: 8px;
+    margin-bottom: 15px;
 }
+
 
 .filter-button {
     border: none;
@@ -41,6 +44,27 @@
 
         }
 }
+
+// Для 768+
+@media screen and (min-width:768px) {
+        .filter-list{
+            justify-content: center;
+            margin-bottom: 30px;
+        }    
+
+        .filter-list__item:not(:last-child) {
+            margin-bottom: 0px;
+        }
+}
+
+// Для 1200+
+@media screen and (min-width:1200px){
+        .filter-list {
+            margin-bottom: 50px;
+        }
+}
+
+
 
 
 

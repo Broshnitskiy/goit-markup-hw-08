@@ -44,6 +44,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 99;
     background-color: var(--page-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04),
     0px 2px 4px rgba(0, 0, 0, 0.08),
@@ -102,7 +103,7 @@
 }
 
 .mobile-menu-nav{
-margin-bottom: 302px;
+    margin-bottom: 302px;
 }
 
 .mobile-menu-nav__item:not(:last-child) {
