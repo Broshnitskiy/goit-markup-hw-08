@@ -41,6 +41,10 @@
     // Для 1200+
     @media screen and (min-width:1200px) {
 
+        .logo-list{
+            flex-wrap: nowrap;
+        }
+
         .logo-list__link {
             padding: 15px 31px;
         }

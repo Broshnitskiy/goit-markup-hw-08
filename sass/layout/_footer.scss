@@ -5,9 +5,21 @@
     background-color: #2F303A;
 }
 
+@media screen and (max-width:1199px){
+    .footer__conteiner {
+        text-align: center;
+    }
+}
 
-.footer__conteiner {
-    text-align: center;
+
+.footer__cont-group,
+.soc-icons {
+    margin-bottom: 60px;
+}
+
+.footer__logo {
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
 
@@ -15,59 +27,62 @@
     font-style: normal;
 }
 
+.add__text {
+    margin-bottom: 8px;
+    color: var(--page-color);
+    line-height: 1.71;
+}
 
-// .footer {
-//     padding-top: 60px;
-//     padding-bottom: 60px;
-//     background-color: #2F303A;
-// }
-
-// .footer__conteiner {
-//     display: flex;
-//     align-items: baseline;
-// }
-
-// .footer__cont-group {
-//     margin-right: 70px;
-// }
-
-// .footer__logo {
-//     display: inline-block;
-//     margin-bottom: 20px;
-// }
+.add__item:not(:last-child) {
+    margin-bottom: 8px;
+}
 
 
-// .add {
-//     font-style: normal;
-// }
+.add__link {
+    color: var(--cont-alfa-color);
+    line-height: 1.71;
+
+    &:hover,
+    &:focus {
+        color: var(--style-color)
+    }
+}
 
 
-// .add__text {
-//     margin-bottom: 9px;
+// Для 768+
+@media screen and (min-width:768px) {
+    .footer__conteiner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+    }
 
-//     color: var(--page-color);
-//     line-height: 1.71;
-// }
-
-// .add__item:not(:last-child) {
-//     margin-bottom: 9px;
-// }
-
-// .add__link {
-//     color: var(--cont-alfa-color);
-//     line-height: 1.71;
-
-//     &:hover,
-//     &:focus {
-//         color: var(--style-color)
-//     }
-// }
+    .footer__cont-group {
+        margin-right: 165px;
+    }
+    
+}
 
 
-// .soc-icons__text {
-//     margin-bottom: 20px;
-//     color: var(--page-color);
-//     font-weight: 700;
-//     line-height: 1.14;
-//     text-transform: uppercase;
-// }
+// Для 1200+
+@media screen and (min-width:1200px){
+        .footer__cont-group {
+            margin-right: 70px;
+            margin-bottom: 0px;
+        }
+
+        .add__text {
+            margin-bottom: 9px;
+        }
+
+        .add__item:not(:last-child) {
+            margin-bottom: 9px;
+        }
+
+        .soc-icons {
+            margin-bottom: 0px;
+        }
+       
+}
+
